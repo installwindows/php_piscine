@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			table {
+				width: 950px;
+			}
+			td {
+				border: 1px solid black;
+				width: 50px;
+				height: 50px;
+				vertical-align: bottom
+			}
+			th {
+				vertical-align: bottom;
+			}
+			td[colspan] {
+				border: 0px;
+			}
+			.mendeleiev td span:nth-child(1) {
+				font-style: bold;
+				vertical-align: middle;
+				text-align: center;
+				display: block;
+				font-size: 18px;
+				color: black;
+			}
+			.mendeleiev td span:nth-child(2) {
+				float: left;
+				font-size: 10px;
+				color: pink;
+			}
+			.mendeleiev td span:nth-child(3) {
+				float: right;
+				font-size: 10px;
+				color: blue;
+			}
+			.note {
+				border: 0px;
+				vertical-align: middle;
+				text-align: center;
+				color: black;
+			}
+			.am {
+				background-color: Crimson;
+			}
+			.aem {
+				background-color: Moccasin;
+			}
+			.lth {
+				background-color: Plum;
+			}
+			.acd {
+				background-color: HotPink;
+			}
+			.tm {
+				background-color: LemonChiffon;
+			}
+			.ptm {
+				background-color: Gainsboro;
+			}
+			.mtl {
+				background-color: DarkSeaGreen;
+			}
+			.pnm {
+				background-color: LightGreen;
+			}
+			.dnm {
+				background-color: SpringGreen;
+			}
+			.ng {
+				background-color: PaleTurquoise;
+			}
+			.unk {
+				background-color: SlateGray;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Periodic table</h1>
+		<table class="mendeleiev">
+			<tr>
+				<th>1</th>
+				<th colspan="16"></th>
+				<th>18</th>
+			</tr>
+			<tr>
+				<td class="dnm"><span>H</span><span>1</span><span>1.01</span></td>
+				<th>2</th>
+				<td colspan="10"></td>
+				<th>13</th>
+				<th>14</th>
+				<th>15</th>
+				<th>16</th>
+				<th>17</th>
+				<td class="ng"><span>He</span><span>2</span><span>4.00</span></td>
+			</tr>
+			<tr>
+				<td class="am"><span>Li</span><span>3</span><span>6.94</span></td>
+				<td class="aem"><span>Be</span><span>4</span><span>9.01</span></td>
+				<td colspan="10"></td>
+				<td class="mtl"><span>B</span><span>5</span><span>10.81</span></td>
+				<td class="pnm"><span>C</span><span>6</span><span>12.01</span></td>
+				<td class="dnm"><span>N</span><span>7</span><span>14.01</span></td>
+				<td class="dnm"><span>O</span><span>8</span><span>16.00</span></td>
+				<td class="dnm"><span>F</span><span>9</span><span>19.00</span></td>
+				<td class="ng"><span>Ne</span><span>10</span><span>20.18</span></td>
+			</tr>
+			<tr>
+				<td class="am"><span>Na</span><span>11</span><span>22.99</span></td>
+				<td class="aem"><span>Mg</span><span>12</span><span>24.31</span></td>
+				<th>3</th>
+				<th>4</th>
+				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+				<th>10</th>
+				<th>11</th>
+				<th>12</th>
+				<td class="ptm"><span>Al</span><span>13</span><span>26.98</span></td>
+				<td class="mtl"><span>Si</span><span>14</span><span>28.09</span></td>
+				<td class="pnm"><span>P</span><span>15</span><span>30.97</span></td>
+				<td class="pnm"><span>S</span><span>16</span><span>32.06</span></td>
+				<td class="dnm"><span>Cl</span><span>17</span><span>35.45</span></td>
+				<td class="ng"><span>Ar</span><span>18</span><span>39.95</span></td>
+			</tr>
+			<tr>
+				<td class="am"><span>K</span><span>19</span><span>39.10</span></td>
+				<td class="aem"><span>Ca</span><span>20</span><span>40.08</span></td>
+				<td class="tm"><span>Sc</span><span>21</span><span>44.96</span></td>
+				<td class="tm"><span>Ti</span><span>22</span><span>47.88</span></td>
+				<td class="tm"><span>V</span><span>23</span><span>50.94</span></td>
+				<td class="tm"><span>Cr</span><span>24</span><span>51.99</span></td>
+				<td class="tm"><span>Mn</span><span>25</span><span>54.94</span></td>
+				<td class="tm"><span>Fe</span><span>26</span><span>55.93</span></td>
+				<td class="tm"><span>Co</span><span>27</span><span>58.93</span></td>
+				<td class="tm"><span>Ni</span><span>28</span><span>58.69</span></td>
+				<td class="tm"><span>Cu</span><span>29</span><span>63.55</span></td>
+				<td class="tm"><span>Zn</span><span>30</span><span>65.39</span></td>
+				<td class="ptm"><span>Ga</span><span>31</span><span>69.73</span></td>
+				<td class="mtl"><span>Ge</span><span>32</span><span>72.61</span></td>
+				<td class="mtl"><span>As</span><span>33</span><span>74.92</span></td>
+				<td class="pnm"><span>Se</span><span>34</span><span>78.09</span></td>
+				<td class="dnm"><span>Br</span><span>35</span><span>79.90</span></td>
+				<td class="ng"><span>Kr</span><span>36</span><span>84.80</span></td>
+			</tr>
+			<tr>
+				<td class="am"><span>Rb</span><span>37</span><span>84.49</span></td>
+				<td class="aem"><span>Sr</span><span>38</span><span>87.62</span></td>
+				<td class="tm"><span>Y</span><span>39</span><span>88.91</span></td>
+				<td class="tm"><span>Zr</span><span>40</span><span>91.22</span></td>
+				<td class="tm"><span>Nb</span><span>41</span><span>92.91</span></td>
+				<td class="tm"><span>Mo</span><span>42</span><span>95.94</span></td>
+				<td class="tm"><span>Tc</span><span>43</span><span>98.91</span></td>
+				<td class="tm"><span>Ru</span><span>44</span><span>101.07</span></td>
+				<td class="tm"><span>Rh</span><span>45</span><span>102.91</span></td>
+				<td class="tm"><span>Pd</span><span>46</span><span>106.42</span></td>
+				<td class="tm"><span>Ag</span><span>47</span><span>107.87</span></td>
+				<td class="tm"><span>Cd</span><span>48</span><span>112.41</span></td>
+				<td class="ptm"><span>In</span><span>49</span><span>114.82</span></td>
+				<td class="ptm"><span>Sn</span><span>50</span><span>118.71</span></td>
+				<td class="mtl"><span>Sb</span><span>51</span><span>121.76</span></td>
+				<td class="mtl"><span>Te</span><span>52</span><span>127.60</span></td>
+				<td class="dnm"><span>I</span><span>53</span><span>126.90</span></td>
+				<td class="ng"><span>Xe</span><span>54</span><span>131.29</span></td>
+			</tr>
+			<tr>
+				<td class="am"><span>Cs</span><span>55</span><span>132.91</span></td>
+				<td class="aem"><span>Ba</span><span>56</span><span>137.33</span></td>
+				<td class="note">*</td>
+				<td class="tm"><span>Hf</span><span>72</span><span>178.49</span></td>
+				<td class="tm"><span>Ta</span><span>73</span><span>180.95</span></td>
+				<td class="tm"><span>W</span><span>74</span><span>183.85</span></td>
+				<td class="tm"><span>Re</span><span>75</span><span>186.21</span></td>
+				<td class="tm"><span>Os</span><span>76</span><span>190.23</span></td>
+				<td class="tm"><span>Ir</span><span>77</span><span>192.22</span></td>
+				<td class="tm"><span>Pt</span><span>78</span><span>195.08</span></td>
+				<td class="tm"><span>Au</span><span>79</span><span>196.97</span></td>
+				<td class="tm"><span>Hg</span><span>80</span><span>200.59</span></td>
+				<td class="ptm"><span>Tl</span><span>81</span><span>204.38</span></td>
+				<td class="ptm"><span>Pb</span><span>82</span><span>207.20</span></td>
+				<td class="ptm"><span>Bi</span><span>83</span><span>208.98</span></td>
+				<td class="ptm"><span>Po</span><span>84</span><span>209.00</span></td>
+				<td class="mtl"><span>At</span><span>85</span><span>209.98</span></td>
+				<td class="ng"><span>Rn</span><span>86</span><span>222.02</span></td>
+			</tr>
+			<tr>
+				<td class="am"><span>Fr</span><span>87</span><span>223.02</span></td>
+				<td class="aem"><span>Ra</span><span>88</span><span>226.03</span></td>
+				<td class="note">&#8224;</td>
+				<td class="tm"><span>Rf</span><span>104</span><span>261.00</span></td>
+				<td class="tm"><span>Db</span><span>105</span><span>262.00</span></td>
+				<td class="tm"><span>Sg</span><span>106</span><span>266.00</span></td>
+				<td class="tm"><span>Bh</span><span>107</span><span>264.00</span></td>
+				<td class="tm"><span>Hs</span><span>108</span><span>269.00</span></td>
+				<td class="unk"><span>Mt</span><span>109</span><span>268.00</span></td>
+				<td class="unk"><span>Ds</span><span>110</span><span>269.00</span></td>
+				<td class="unk"><span>Rg</span><span>111</span><span>272.00</span></td>
+				<td class="tm"><span>Cn</span><span>112</span><span>277.00</span></td>
+				<td class="unk"><span>Nh</span><span>113</span><span>284.00</span></td>
+				<td class="unk"><span>Fl</span><span>114</span><span>289.00</span></td>
+				<td class="unk"><span>Mc</span><span>115</span><span>288.00</span></td>
+				<td class="unk"><span>Lv</span><span>116</span><span>293.00</span></td>
+				<td class="unk"><span>Ts</span><span>117</span><span>294.00</span></td>
+				<td class="unk"><span>Og</span><span>118</span><span>294.00</span></td>
+			</tr>
+			<tr>
+				<td colspan="1"></td>
+				<td class="note">*</td>
+				<td class="lth"><span>La</span><span>57</span><span>138.91</span></td>
+				<td class="lth"><span>Ce</span><span>58</span><span>140.12</span></td>
+				<td class="lth"><span>Pr</span><span>59</span><span>140.91</span></td>
+				<td class="lth"><span>Nd</span><span>60</span><span>144.24</span></td>
+				<td class="lth"><span>Pm</span><span>61</span><span>144.91</span></td>
+				<td class="lth"><span>Sm</span><span>62</span><span>150.36</span></td>
+				<td class="lth"><span>Eu</span><span>63</span><span>151.97</span></td>
+				<td class="lth"><span>Gd</span><span>64</span><span>157.25</span></td>
+				<td class="lth"><span>Tb</span><span>65</span><span>158.93</span></td>
+				<td class="lth"><span>Dy</span><span>66</span><span>162.50</span></td>
+				<td class="lth"><span>Ho</span><span>67</span><span>164.93</span></td>
+				<td class="lth"><span>Er</span><span>68</span><span>167.26</span></td>
+				<td class="lth"><span>Tm</span><span>69</span><span>168.93</span></td>
+				<td class="lth"><span>Yb</span><span>70</span><span>173.04</span></td>
+				<td class="lth"><span>Lu</span><span>71</span><span>174.97</span></td>
+			</tr>
+			<tr>
+				<td colspan="1"></td>
+				<td class="note">&#8224;</td>
+				<td class="acd"><span>Ac</span><span>89</span><span>227.03</span></td>
+				<td class="acd"><span>Th</span><span>90</span><span>232.04</span></td>
+				<td class="acd"><span>Pa</span><span>91</span><span>231.04</span></td>
+				<td class="acd"><span>U</span><span>92</span><span>238.03</span></td>
+				<td class="acd"><span>Np</span><span>93</span><span>237.05</span></td>
+				<td class="acd"><span>Pu</span><span>94</span><span>244.06</span></td>
+				<td class="acd"><span>Am</span><span>95</span><span>243.06</span></td>
+				<td class="acd"><span>Cm</span><span>96</span><span>247.07</span></td>
+				<td class="acd"><span>Bk</span><span>97</span><span>247.07</span></td>
+				<td class="acd"><span>Cf</span><span>98</span><span>251.08</span></td>
+				<td class="acd"><span>Es</span><span>99</span><span>254.00</span></td>
+				<td class="acd"><span>Fm</span><span>100</span><span>257.10</span></td>
+				<td class="acd"><span>Md</span><span>101</span><span>258.10</span></td>
+				<td class="acd"><span>No</span><span>102</span><span>259.10</span></td>
+				<td class="acd"><span>Lr</span><span>103</span><span>262.00</span></td>
+			</tr>
+		</table>
+		<img src="http://www.ikea.com/us/en/images/products/lack-coffee-table-brown__57540_PE163122_S4.JPG">
+	</body>
+</html>
