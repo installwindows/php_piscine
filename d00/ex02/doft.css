@@ -1,0 +1,35 @@
+body {
+	background-color: #505050;
+}
+
+div {
+	background-color: #909090;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px black;
+
+}
+
+#header {
+	width: 1200px;
+	height: 200px;
+}
+
+#left {
+	width: 150px;
+	height: 400px;
+	float: left;
+}
+
+#middle {
+	width: 700px;
+	height: 500px;
+}
+
+#right {
+	width: 150px;
+	height: 400px;
+	float: right;
+}
+
+#textbox {
+}
