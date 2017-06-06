@@ -6,6 +6,7 @@ div {
 	background-color: #909090;
 	border-radius: 10px;
 	box-shadow: 10px 10px 5px black;
+	margin: 15px;
 
 }
 
@@ -18,18 +19,27 @@ div {
 	width: 150px;
 	height: 400px;
 	float: left;
+	margin-left: 80px;
 }
 
 #middle {
 	width: 700px;
 	height: 500px;
+	float: left;
 }
 
 #right {
 	width: 150px;
 	height: 400px;
-	float: right;
+	float: left;
 }
 
 #textbox {
+	width: 450px;
+	height: 150px;
+	z-index: 99;
+	position: absolute;
+	top: 700px;
+	left: 30px;
+	background-color: #88ff89;
 }
