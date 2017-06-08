@@ -1,3 +1,7 @@
 #!/usr/bin/php
 <?php
-	for
+for ($i = 0; $i < 1000; $i++)
+{
+	echo "x";
+}
+echo "\n";
