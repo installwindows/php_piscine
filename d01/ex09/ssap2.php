@@ -5,11 +5,18 @@ function cmp($a, $b)
 	$s = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	$a = strtoupper($a);
 	$b = strtoupper($b);
-	$pa = strpos($s, $a);
-	$pb = strpos($s, $b);
 
-	//echo "a: " . $a . "\nb: " . $b . "\n";
-	//echo "pa: " . $pa . "\npb: " . $pb . "\n";
+	$i = 0;
+	while (isset($a[$i]) && isset($a[$i]) && $a[$i] == $b[$i])
+		$i++;
+	if (isset($a[$i]) == false && isset($b[$i]) == false)
+		return (0);
+	else if (isset($a[$i]) == false)
+		return (-1);
+	else if (isset($b[$i]) == false)
+		return (1);
+	$pa = strpos($s, $a[$i]);
+	$pb = strpos($s, $b[$i]);
 	if (is_bool($pa) === false)
 	{
 		if (is_bool($pb) === false)
@@ -18,13 +25,9 @@ function cmp($a, $b)
 			return (-1);
 	}
 	else if (is_bool($pb) === false)
-	{
 		return (1);
-	}
 	else
-	{
-		return (strcmp($a, $b));
-	}
+		return (strcmp($a[$i], $b[$i]));
 }
 function ft_split($str)
 {
