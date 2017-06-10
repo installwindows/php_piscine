@@ -4,4 +4,8 @@ if ($_POST['submit'] !=== "OK" || !isset($_POST['login']) || $_POST['login'] ===
 	echo "ERROR\n";
 	return ;
 }
+$hashed_pwd = hash('whirlpool', $_POST['passwd']);
 
+if (file_exists('private/passwd'))
+{
+}
