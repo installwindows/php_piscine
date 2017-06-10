@@ -26,4 +26,5 @@ if ($file !== "")
 $file[] = ['login' => $_POST['login'], 'passwd' => $hashed_pwd];
 $file = serialize($file);
 file_put_contents("../private/passwd", $file);
+header("Location: index.html", true, 301);
 echo "OK\n";
