@@ -27,7 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
 	if (auth($login, $passwd))
 	{
-		$_SESSION['loggued_on_user'] = $_POST['login'];
+		$_SESSION['loggued_on_user'] = $login;
+		merge_cart($login);
 		$msg = "Success!";
 	}
 	else

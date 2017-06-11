@@ -2,6 +2,15 @@
 include 'utils.php';
 
 $cart = get_cart($_SESSION['loggued_on_user']);
+$err = [];
+if ($_SERVER['REQUEST_METHOD'] == "POST")
+{
+	$delete = fix_input($_POST['delete']);
+	if (!empty($delete))
+		$cart = remove_from_cart($delete, $_SESSION['loggued_on_user']);
+	else
+		$err[] = "Invalid item id";
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,14 +19,24 @@ $cart = get_cart($_SESSION['loggued_on_user']);
 	</head>
 	<body>
 		<h2>My cart</h2>
+		<div class="error">
+		<?php
+			foreach ($err as $e)
+				echo $e . "<br />\n";
+		?>
+		</div>
 		<ul>
 		<?php
 			foreach ($cart as $c)
 			{
-				echo "<li>" . $c . "</li>\n";
+				echo '<form action="cart.php" method="POST">';
+				echo "<li>" . $c['qty'] . " of " . $c['id'] . ' ';
+				echo '<input type="hidden" name="delete" value="' . $c['id'] . '" />';
+				echo '<input type="submit" name="submit" value="Delete" /></li>';
+				echo '</form>';
 			}
 		?>
 		</ul>
-		<a href="index.php">Home</a>
+		<a href="index.php">Home</a> <a href="checkout.php">Checkout</a>
 	</body>
 </html>
