@@ -51,6 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 			<br />
 			<input type="submit" name="submit" value="OK" />
 		</form>
+		<a href="index.php">Home</a>
 		<div class="success">
 		<?php
 			echo $msg . "<br />\n";

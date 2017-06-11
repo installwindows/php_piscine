@@ -1,6 +1,8 @@
 <?php
 include 'utils.php';
 
+session_start();
+
 $msg = "";
 $err = [];
 $login = "";
@@ -29,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
 			$pwd = hash('whirlpool', $passwd);
 			$file[] = ['login' => $login, 'passwd' => $pwd];
 			file_put_contents('users/' . $login, serialize($file));
+			$_SESSION['loggued_on_user'] = $_POST['login'];
 			$msg = "Success!";
 		}
 	}
@@ -51,6 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
 			<br />
 			<input type="submit" name="submit" value="OK" />
 		</form>
+		<a href="index.php">Home</a>
 		<div class="success">
 		<?php
 			echo $msg . "<br />\n";
