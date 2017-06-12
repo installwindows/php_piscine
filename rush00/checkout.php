@@ -21,7 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	if ($submit === 'Accept')
 	{
 		$order = create_order($login, $cart);
-		$msg = $order['id'];
+		$msg = $order[0]['id'];
+		$_SESSION['cart'] = [];
 	}
 	else
 		$err[] = "Submit value invalid";

@@ -212,6 +212,7 @@ function create_order($login, $cart)
 	{
 		$order[] = $c;
 	}
+	file_put_contents('orders/' . $order[0]['id'], serialize($order));
 	return ($order);
 }
 

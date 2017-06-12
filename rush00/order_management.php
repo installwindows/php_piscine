@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		if (empty($_POST['id']))
 			$err[] = "Id required";
 		else
-			$name = fix_input($_POST['id']);
+			$id = fix_input($_POST['id']);
 		if (empty($_POST['oldid']))
 			$err[] = "Old id required";
 		else
@@ -48,12 +48,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 				$err[] = "old id login must be alphanumeric";
 		if (empty($err))
 		{
-			if (product_exists($oldid))
+			if (order_exists($oldid))
 			{
-				unlink('products/' . $oldid);
+				unlink('orders/' . $oldid);
 			}
 			else
-				$err[] = "Don't change the old login";
+				$err[] = "Don't change the old id";
 		}
 	}
 }
