@@ -19,7 +19,7 @@ function save_cart($cart, $login)
 	}
 	else
 	{
-		$_SESSION['cart'][] = $cart;
+		$_SESSION['cart'] = $cart;
 	}
 }
 
@@ -114,6 +114,105 @@ function destroy_cart($login)
 
 function get_user_info($login)
 {
-	
+	$user = file_get_contents('users/' . $login);
+	$user = unserialize($user);
+	if ($user == false)
+		$user = "";
+	return ($user);
 }
+
+function get_all_users()
+{
+	$users = [];
+	$files = scandir('users/');
+	if ($files == false)
+		return ([]);
+	foreach ($files as $file)
+	{
+		if (!in_array($file, array('.', '..')))
+		{
+			$content = get_user_info($file);
+			if (!empty($content))
+				$users[] = $content;
+		}
+	}
+	return ($users);
+}
+
+function get_product_info($product)
+{
+	$p = file_get_contents('products/' . $product);
+	$p = unserialize($p);
+	if ($p == false)
+		$p = "";
+	return ($p);
+}
+
+function get_all_products()
+{
+	$products = [];
+	$files = scandir('products/');
+	if ($files == false)
+		return ([]);
+	foreach ($files as $file)
+	{
+		if (!in_array($file, array('.', '..')))
+		{
+			$content = get_product_info($file);
+			if ($content != false)
+				$products[] = $content;
+		}
+	}
+	return ($products);
+}
+
+function product_exists($product)
+{
+	return (file_exists('products/' . $product));
+}
+
+function get_order_info($id)
+{
+	$p = file_get_contents('orders/' . $id);
+	$p = unserialize($p);
+	if ($p == false)
+		$p = "";
+	return ($p);
+}
+
+function get_all_orders()
+{
+	$orders = [];
+	$files = scandir('orders/');
+	if ($files == false)
+		return ([]);
+	foreach ($files as $file)
+	{
+		if (!in_array($file, array('.', '..')))
+		{
+			$content = get_order_info($file);
+			if ($content != false)
+				$orders[] = $content;
+		}
+	}
+	return ($orders);
+}
+
+function order_exists($id)
+{
+	return (file_exists('orders/' . $id));
+}
+
+function create_order($login, $cart)
+{
+	$order = [];
+
+	$order[] = ['id' => time(), 'login' => $login];
+	foreach ($cart as $c)
+	{
+		$order[] = $c;
+	}
+	return ($order);
+}
+
 ?>
