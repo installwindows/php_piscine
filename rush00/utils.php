@@ -106,4 +106,8 @@ function destroy_cart($login)
 {
 }
 
+function get_user_info($login)
+{
+	
+}
 ?>
