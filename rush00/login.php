@@ -10,7 +10,7 @@ function auth($login, $passwd)
 	$file = file_get_contents('users/' . $login);
 	$content = unserialize($file);
 	$pwd = hash('whirlpool', $passwd);
-	if ($content[0]['login'] === $login && $content[0]['passwd'] === $pwd)
+	if ($content['login'] === $login && $content['passwd'] === $pwd)
 		return (true);
 	return (false);
 }

@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
 		if (empty($err))
 		{
 			$pwd = hash('whirlpool', $passwd);
-			$file[] = ['login' => $login, 'passwd' => $pwd];
+			$file = ['login' => $login, 'passwd' => $pwd];
 			file_put_contents('users/' . $login, serialize($file));
 			$_SESSION['loggued_on_user'] = $login;
 			merge_cart($login);

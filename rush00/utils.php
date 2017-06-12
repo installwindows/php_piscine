@@ -102,6 +102,12 @@ function merge_cart($login)
 	}
 }
 
+function cart_size($login)
+{
+	$cart = get_cart($login);
+	return (count($cart));
+}
+
 function destroy_cart($login)
 {
 }

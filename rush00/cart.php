@@ -37,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
 			}
 		?>
 		</ul>
+		<div><?php echo cart_size($_SESSION['loggued_on_user']); ?></div>
 		<a href="index.php">Home</a> <a href="checkout.php">Checkout</a>
 	</body>
 </html>

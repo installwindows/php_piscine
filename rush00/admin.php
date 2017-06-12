@@ -34,6 +34,8 @@ $products= [];
 	</head>
 	<body>
 		<h2>User Management</h2>
+			<a href="user_management.php">Users</a>
 		<h2>Product Management</h2>
+			<a href="product_management.php">Products</a>
 	</body>
 </html>
