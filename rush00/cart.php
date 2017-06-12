@@ -27,17 +27,20 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
 		</div>
 		<ul>
 		<?php
+			$total = 0;
 			foreach ($cart as $c)
 			{
+				$item = get_product_info($c['id']);
+				$total += $item['price'];
 				echo '<form action="cart.php" method="POST">';
-				echo "<li>" . $c['qty'] . " of " . $c['id'] . ' ';
+				echo "<li>" . $c['qty'] . " of " . $c['id'] . ' for ' . $item['price'] . ' ';
 				echo '<input type="hidden" name="delete" value="' . $c['id'] . '" />';
 				echo '<input type="submit" name="submit" value="Delete" /></li>';
 				echo '</form>';
 			}
 		?>
 		</ul>
-		<div><?php echo cart_size($_SESSION['loggued_on_user']); ?></div>
+		<?php echo '<b>Total: ' . $total . '</b><br />'; ?>
 		<a href="index.php">Home</a> <a href="checkout.php">Checkout</a>
 	</body>
 </html>

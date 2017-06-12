@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	else
 		$err[] = "Invalid product";
 }
-
+$products = get_all_products();
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,33 +38,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		<div class="info">
 			<p><?php echo $msg; ?></p>
 		</div>
-		<form action="product.php" method="POST">
-			<div class="item">
-				Sample banana
-				<ul>
-					<li>Yellow</li>
-					<li>4.99</li>
-					<li>California</li>
-				</ul>
-				<input type="hidden" name="product" value="sample_banana" />
-				Quantity <input type="text" name="qty" value="1" size="2" maxlength="2"/><br />
-				<input type="submit" name="submit" value="Add" />
-			</div>
-		</form>
-		<hr />
-		<form action="product.php" method="POST">
-			<div class="item">
-				Purple Banana
-				<ul>
-					<li>Purple</li>
-					<li>0.59</li>
-					<li>East</li>
-				</ul>
-				<input type="hidden" name="product" value="purple_banana" />
-				Quantity <input type="text" name="qty" value="1" size="2" maxlength="2"/><br />
-				<input type="submit" name="submit" value="Add" />
-			</div>
-		</form>
+		<?php
+			foreach ($products as $p)
+			{
+				echo '<form action="product.php" method="POST">';
+				echo '<div class="item">';
+				echo $p['id'] . '<br />';
+				echo '<ul>';
+				echo '<li>' . $p['category'] . '</li>';
+				echo '<li>' . $p['price'] . '</li>';
+				echo '</ul>';
+				echo '<input type="hidden" name="product" value="' . $p['id'] . '" />';
+				echo 'Quantity <input type="text" name="qty" value="1" size="2" maxlength="2"/><br />';
+				echo '<input type="submit" name="submit" value="Add" />';
+				echo '</div>';
+				echo '</form>';
+				echo '<hr />';
+			}
+		?>
 		<a href="index.php">Home</a>
 	</body>
 </html>

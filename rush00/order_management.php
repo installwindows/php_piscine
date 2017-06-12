@@ -85,9 +85,9 @@ $orders = get_all_orders();
 				while (isset($p[$i]))
 				{
 					echo '<ul>';
-					echo '<li>Price <input type="text" name="price" value="' . $p[$i]['price'] . '" /><li/>';
+					echo '<li>Price <input type="text" name="price" value="' . $p[$i]['price'] . '" /></li>';
 					echo '<input type="hidden" name="oldname" value="' . $p[$i]['id'] . '" />';
-					echo '<li>Category <input type="text" name="category" value="' . $p[$i]['category'] . '" /><li/>';
+					echo '<li>Category <input type="text" name="category" value="' . $p[$i]['category'] . '" /></li>';
 					echo '</ul>';
 					$i++;
 				}
